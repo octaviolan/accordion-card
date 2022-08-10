@@ -1,0 +1,182 @@
+@import './fonts.css';
+@import './icons.css';
+
+:root {
+    /* Tipografía */
+    font-size: 12px;
+    --basefontFamily: 'Josefin Sans', sans-serif;
+    --headline: bold  2.66rem/3.3rem var(--basefontFamily);
+    --baseFont: normal 1rem/1.5rem var(--basefontFamily);
+    --questionboldMobile: bold 1.08rem/1.34rem var(--basefontFamily);
+    --questionMobile: normal 1.08rem/1.34rem var(--basefontFamily);
+    --questionboldDesktop: bold 1.16rem/1.44rem var(--basefontFamily);
+    --questionDesktop: normal 1.16rem/1.44rem var(--basefontFamily);
+    /* Colores */
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+    --darkGrayishBlue: hsl(240, 6%, 50%);
+    --lightGrayishBlue: hsl(240, 5%, 91%);
+    --white: #ffffff;
+    --darkBlue: #1E1F36;
+    --orange: #F47B56;
+  }
+
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, var(--softViolet) 0%, var(--softBlue) 100%);
+    font: var(--baseFont);
+    color: var(--darkGrayishBlue);
+    margin: 0;
+}
+
+.accordion {
+    /* inline-size: 27.25rem; */
+    block-size: 44.58rem;
+    background-color: var(--white);
+    margin-inline: 2rem;
+    margin-block-start: 12.33rem;
+    margin-block-end: 7rem;
+    border-radius: 2rem;
+}
+
+.accordion-img {
+    margin-block-end: 28px;
+    /* inline-size: 100%; */
+    block-size: 8.66rem;
+    position: relative;
+}
+
+.img-woman {  
+ block-size: 17.66rem;
+ inline-size: 20rem;
+ position: absolute;
+ left: 50%;
+ bottom: 0;
+ transform: translateX(-50%);
+ background-image: url('../images/bg-pattern-mobile.svg');
+ background-repeat: no-repeat;
+ background-size: contain;
+ background-position: bottom;
+}
+
+.img-box {
+    display: none;
+}
+
+.img-woman img {
+    /* display: none; */
+}
+
+.accordion-faq {
+    padding-inline: 2rem;
+}
+
+.headline h1 {
+    margin-block-start: 0;
+    margin-block-end: 2.5rem;
+    text-align: center;
+    font: var(--headline);
+    text-transform: uppercase;
+    color: var(--darkBlue);
+}
+
+.accordion-item {
+    margin-block-end: 1.5rem;
+    padding-block-end: 1.33rem;
+    border-bottom: 1px solid var(--lightGrayishBlue);
+}
+
+.accordion-header {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header p {
+    margin: 0;
+    font: var(--questionMobile);
+    color: var(--veryDarkGrayishBlue);
+}
+
+.accordion-header p:hover {
+    color: var(--orange);
+}
+
+.accordion-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+.accordion-button i {
+    color: var(--orange);
+}
+
+.accordion-body {
+    margin-block-start: 1rem;
+    margin-block-end: 0;
+    display: none;
+}
+
+.accordion-item:nth-child(2) .accordion-body{
+    display: block;
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        
+    }
+    .accordion {
+        margin: 0;
+        inline-size: 76.6rem;
+        block-size: 42.4rem;
+        display: flex;
+        align-items: center;
+        gap: 7.25rem;
+    }
+
+    .accordion-img {
+        inline-size: 32.3rem;
+        block-size: 100%;
+        margin-block-end: 0;
+        background: url('../images/illustration-woman-online-desktop.svg') no-repeat right center, url('../images/bg-pattern-desktop.svg') right -24rem;
+        /* background-repeat: no-repeat; */
+        /* background-position: right -290px; */
+    }
+
+    .img-woman {
+        display: none;
+    }
+
+    .img-box {
+        display: block;
+        position: absolute;
+        left: -25%;
+        top: 50%;
+        transform: translateY(-25%);
+    }
+
+    .accordion-faq {
+        inline-size: 29rem;
+        padding: 0;
+    }
+
+    .headline h1 {
+        text-align: start;
+        margin-block-end: 2.9rem;
+    }
+
+    .accordion-header p {
+        font: var(--questionDesktop);
+    }
+}
+
