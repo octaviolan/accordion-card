@@ -115,18 +115,17 @@ body {
     color: var(--orange);
 }
 
+.accordion-collapse {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
 .accordion-body {
     margin-block-start: 1rem;
     margin-block-end: 0;
-    display: none;
+   
 }
-
-.accordion-item:nth-child(2) .accordion-body{
-    display: block;
-}
-
-
-
 
 @media screen and (min-width: 1024px) {
     body {
@@ -135,6 +134,7 @@ body {
         place-items: center;
         
     }
+
     .accordion {
         margin: 0;
         inline-size: 76.6rem;
@@ -166,7 +166,7 @@ body {
     }
 
     .accordion-faq {
-        inline-size: 29rem;
+        inline-size: 29.5rem;
         padding: 0;
     }
 
@@ -179,4 +179,6 @@ body {
         font: var(--questionDesktop);
     }
 }
+
+
 
