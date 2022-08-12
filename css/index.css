@@ -180,5 +180,8 @@ body {
     }
 }
 
-
+/* show text */
+.show-text .accordion-collapse {
+    height: 45px;
+}
 
