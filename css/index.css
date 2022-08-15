@@ -108,6 +108,7 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
+    transition: all 0.3s;
 }
 
 
@@ -185,3 +186,10 @@ body {
     height: 45px;
 }
 
+.show-text .accordion-header p {
+    font-weight: bold;
+}
+
+.show-text .accordion-button {
+    transform: rotate(180deg);
+}
